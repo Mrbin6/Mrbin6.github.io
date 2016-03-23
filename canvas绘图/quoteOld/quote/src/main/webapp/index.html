@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>CSS3彩色进度条DEMO演示</title>
+  <link rel="stylesheet" href="css/progressbar.css">
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+  <section class="container">
+    <div class="progress" style="float:left">
+      <div class="progress-bar"></div>
+	 
+    </div>
+	 <a style="float:left" id="progress">0</a>
+  </section>
+  <div style="text-align:center;clear:both;">
+</div>
+
+<script>
+	$().ready(function(){
+		var i = 10;
+		$('#progress').click(function(){
+			$('.progress-bar').css('width',i+'%');
+			if(i > 0 && i <= 20){
+				$('.progress-bar').css('background','#f63a0f');
+			} else if(i > 20 && i <= 40){
+				$('.progress-bar').css('background','#f27011');
+			} else if(i > 40 && i <= 60){
+				$('.progress-bar').css('background','#f2b01e');
+			} else if(i > 60 && i <= 80){
+				$('.progress-bar').css('background','#f2d31b');
+			} else if(i > 80 && i <= 100){
+				$('.progress-bar').css('background','#86e01e');
+			}
+			$(this).text(i+'%');
+			i += 10;
+			if(i == 110){
+				i = 0;
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

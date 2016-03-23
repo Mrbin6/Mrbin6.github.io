@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.talkforex.quote.dao.RecordMapper">
+  
+  <resultMap id="BaseResultMap" type="com.talkforex.quote.entity.Record">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="Time" jdbcType="TIMESTAMP" property="time" />
+    <result column="ClientIP" jdbcType="VARCHAR" property="clientip" />
+    <result column="ReferURL" jdbcType="VARCHAR" property="referurl" />
+    <result column="FunctionID" jdbcType="INTEGER" property="functionid" />
+    <result column="InstGroup" jdbcType="INTEGER" property="instgroup" />
+    <result column="MType" jdbcType="VARCHAR" property="mtype" />
+    <result column="MCode" jdbcType="VARCHAR" property="mcode" />
+    <result column="AppVersion" jdbcType="VARCHAR" property="appversion" />
+    <result column="SysVersion" jdbcType="VARCHAR" property="sysversion" />
+  </resultMap>
+ 
+  <insert id="insert" parameterType="com.talkforex.quote.entity.Record">
+    insert into record (ID, Time, ClientIP, ReferURL, FunctionID, InstGroup, MType, MCode, AppVersion, SysVersion)
+    values (#{id,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, #{clientip,jdbcType=VARCHAR}, 
+      #{referurl,jdbcType=VARCHAR}, #{functionid,jdbcType=INTEGER}, #{instgroup,jdbcType=INTEGER},
+      #{mtype,jdbcType=VARCHAR}, #{mcode,jdbcType=VARCHAR}, #{appversion,jdbcType=VARCHAR}, #{sysversion,jdbcType=VARCHAR})
+  </insert>
+  
+</mapper>

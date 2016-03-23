@@ -1,0 +1,43 @@
+
+
+/****-globals-功能: 重设浏览器默认样式****/
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html{
+	color:#000;background:#fff;
+	-webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body {
+	margin:0;padding:0; color: #333; 
+}
+li{list-style:none;}
+a{font-size:16px;cursor:pointer}
+.KLineHeader{margin-left:15px;height:30px;line-height:30px; border-bottom:1px dotted #CCC;padding:10px;}
+.KLineHeader-left{float: left; line-height: 30px;}
+.KLineHeader-left select{ display:block;  float: left; margin-top: 7px;}
+.KLineHeader-left .tab{display:block; float: left;}
+.KLineHeader-left ul{ padding-left:30px;margin-top:7px;}
+.KLineHeader-left li{padding:0 12px; border-right:1px solid #ccc;height:18px;line-height: 18px; cursor: pointer; float: left;}
+.KLineHeader-left li a{padding:0px;}
+.KLineHeader-left .hover{border-bottom: 2px solid red; color: red;}
+.KLineHeader-left .line{ float: left;}
+.KLineHeader-left .line a{width:27px; height:28px; background: url(../img/conn.png) no-repeat; display: block; text-indent: -9999px; float:left ;margin-left:15px;}
+.KLineHeader-left .line .candle{ background-position:-56px 0; }
+.KLineHeader-left .line .candlehover{ background-position:-56px -29px; }
+.KLineHeader-left .line .stick{ background-position:-29px 0; display:none}
+.KLineHeader-left .line .stickhover{ background-position:-29px 0; display:none}
+.KLineHeader-left .line .broken { background-position: 0 0;}
+.KLineHeader-left .line .brokenhover { background-position: 0 -29px;}
+
+.KLineHeader-right{float: right;margin-right:10px;}
+.KLineHeader-right  a{width:27px; height:28px; background: url(../img/conn.png) no-repeat; display: block; text-indent: -9999px; float:left ;margin-left:15px;}
+.KLineHeader-right .camera { background-position: -29px -140px;display:none;}
+.KLineHeader-right .bigger { background-position: -28px -112px;}
+.KLineHeader-right .biggest { background-position: 0 -112px;}
+.KLineHeader-right .smaller { background-position: -28px -82px;}
+.KLineHeader-right .smallest { background-position: 0 -82px;}
+.KLineHeader-right .refresh { background-position: -28px -57px;margin-top:6px;}
+
+.loading{width:40px; height:40px; background: url(../img/loading.gif);cursor:pointer}

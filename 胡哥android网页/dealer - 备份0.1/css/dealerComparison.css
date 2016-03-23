@@ -1,0 +1,92 @@
+*{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+.dealerComp{
+    width:750px;
+    margin:0 auto;
+    font-family:"Helvetica","Microsoft YaHei";
+    font-size:28px;
+    color:#999;
+    -webkit-box-shadow: 0 0 10px #666;
+    -moz-box-shadow: 0 0 10px #666;
+    box-shadow: 0 0 10px #666;
+    margin-bottom:10px;
+}
+.header
+{
+    width:100%;
+    height:96px;
+    background-color:#D84941;
+}
+.header h1{
+    width:100%;
+    height:96px;
+    font-size:38px;
+    line-height:96px;
+    text-align:center;
+    color:#fff;
+    font-weight:lighter;
+    letter-spacing:2px;
+}
+.content,
+.content table{
+    width:100%;
+}
+.content{
+    padding-bottom:48px;
+    background-color:#eee;
+}
+.content table{
+    border-spacing:0;
+    border-collapse: collapse;
+    border:1px solid #e5e5e5;
+}
+.content table tr{
+    border-bottom:1px solid #e5e5e5;
+    text-align:center;
+    height:100px;
+    background-color:#fff;
+}
+.content table .tr_head{
+    height:64px;
+}
+.tr_head th{
+    background-color:#eee;
+    font-size:28px;
+    color:#333;
+    font-weight:normal;
+}
+.tr_head .hd_th1{
+    text-align:center;
+}
+.tr_head .hd_th2{
+    width:200px;
+}
+.tr_head .hd1{
+    text-align:center;
+    padding-left:91px;
+}
+.content table .td_left{
+    text-align:left;
+    color:#333;
+    font-size:30px;
+    width:200px;
+}
+.table_img{
+    height:80px;
+    vertical-align:middle;
+    border:1px solid #ddd;
+    border-radius:5px;
+}
+.content table .table_img_td{
+    text-align:left;
+    padding-left:20px;
+    width:106px;
+}
+.content table .font30{
+    font-size:28px;
+    color:#999;
+}
+

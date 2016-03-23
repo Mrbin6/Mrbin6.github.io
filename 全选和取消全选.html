@@ -1,0 +1,23 @@
+<script src="jquery-1.11.3.js"></script>
+全选<input id="selectAll" type="checkbox"/><br/>
+<input name="SA" type="checkbox"/>
+<input name="SA" type="checkbox"/>
+<input name="SA" type="checkbox"/>
+<input name="SA" type="checkbox"/>
+<input name="SA" type="checkbox"/>
+<input name="SA" type="checkbox"/>
+<input name="SA" type="checkbox"/>
+<input name="SA" type="checkbox"/>
+<input name="SA" type="checkbox"/>
+<input name="SA" type="checkbox"/>
+
+
+<script type="text/javascript">
+	$("#selectAll").change(function(){
+		if($(this)[0].checked==true){
+			$("input[name='SA']").prop("checked",true);
+		}else if($(this)[0].checked==false){
+			$("input[name='SA']").prop("checked",false);
+		}
+	});
+</script>

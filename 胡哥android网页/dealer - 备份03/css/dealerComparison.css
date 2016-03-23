@@ -1,0 +1,122 @@
+*{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+.dealerComp{
+    width:37.5em;
+    margin:0 auto;
+    font-family:"Helvetica","Microsoft YaHei";
+    color:#999;
+    font-size:1.25em;
+    margin-bottom:10px;
+}
+.header
+{
+    width:100%;
+    height:4.8em;
+    background-color:#D84941;
+}
+.header h1{
+    width:100%;
+    height:2.5263em;
+    font-size:1.9em;
+    line-height:2.5263em;
+    text-align:center;
+    color:#fff;
+    font-weight:lighter;
+    letter-spacing:2px;
+}
+.content,
+.content table{
+    width:100%;
+}
+.content{
+    padding-bottom:2.4em;
+    background-color:#eee;
+}
+.content table{
+    border-spacing:0;
+    border-collapse: collapse;
+    border-bottom:1px solid #e5e5e5;
+}
+.content table tr{
+    border-bottom:1px solid #e5e5e5;
+    text-align:center;
+    height:5em;
+    background-color:#fff;
+}
+.content table .tr_head{
+    height:3.2em;
+}
+.tr_head th{
+    background-color:#eee;
+    font-size:1.4em;
+    color:#333;
+    font-weight:normal;
+}
+.tr_head .hd_th1{
+    text-align:center;
+}
+.tr_head .hd_th2{
+    width:7.1428em;
+}
+.tr_head .hd1{
+    text-align:center;
+    /*padding-left:3.2142em;*/
+    padding-left:0.295857em;
+}
+.content table .td_left{
+    text-align:left;
+    color:#333;
+    font-size:1.5em;
+    width:6.6666em;
+}
+.table_img{
+    height:4em;
+    vertical-align:middle;
+    border:1px solid #ddd;
+    border-radius:5px;
+}
+.content table .table_img_td{
+    text-align:left;
+    padding-left:1em;
+    width:5.3em;
+}
+.content table .font30{
+    font-size:1.4em;
+    color:#999;
+}
+@media screen and (max-width:1080px){
+    body {
+        font-size: 1.28em;
+    }
+    .content{
+        width:100%;
+    }
+}
+@media screen and (max-width:768px){
+    .dealerComp {
+        width:100%;
+        font-size: 1em;
+    }
+}
+@media screen and (max-width:600px){
+    .dealerComp {
+        width:100%;
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width:480px){
+    .dealerComp {
+        width:100%;
+        font-size: 0.4em;
+    }
+}
+@media screen and (max-width:240px){
+    .dealerComp {
+        width:100%;
+        font-size: 0.3em;
+    }
+}
+

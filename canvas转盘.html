@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <style>
+	.bj_canvas_div{
+		margin:0 auto;
+		width:200px;
+		height:200px;
+		border:1px solid black;
+	}
+	.bj_can_btn{
+		width:80px;
+		height:30px;
+		background-color:purple;
+		border-radius:6px;
+		text-align:center;
+		color:white;
+		font-weight:bold;
+		font-size:15px;
+		margin:5px auto;
+		line-height:30px;
+		cursor:pointer;
+	}
+ </style>
+ <body>
+ <div class="bj_canvas_div">
+  <canvas id="canv" width="200" height="200"></canvas>
+ </div>
+ <div class="bj_can_btn">开始</div>
+ </body>
+ <script>
+ window.onload=function(){
+	window.document.oncontextmenu=function(){
+		return false;
+	}
+	var cans=document.querySelector("#canv");
+	var cxt=cans.getContext("2d");
+	cxt.translate(100,100);
+	var img=new Image();
+	img.src="chrome.png";
+	img.onload=function(){
+		drawMyImage(0);
+	}
+	function drawMyImage(degree){
+		cxt.rotate(degree*Math.PI/180);
+		cxt.drawImage(img,-100,-100,200,200);
+	}
+	var btn=document.querySelector(".bj_can_btn");
+	btn.onclick=function(){
+		var k=0;
+		var timer1=setInterval(function(){
+			k=20;
+			if(k>360){
+				k=1;
+			}
+			drawMyImage(k);
+			},40);
+		var timer2=setTimeout(function(){
+			clearInterval(timer1);
+			clearInterval(this);
+		},3000);
+	}
+ }
+ </script>
+</html>

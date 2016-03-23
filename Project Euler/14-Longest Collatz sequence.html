@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title></title>
+	 <script>
+		var k=0;//用于累加计算出的数字的个数
+		var num=0;//目前最长的开始数字
+		var maxn=0;//目前最长是多少个
+
+		for(var i=1;i<=1000000;i++){
+			k=0;
+			judge(i);
+			if(k>maxn){
+				maxn=k;
+				num=i;
+			}
+		}
+		console.log(maxn);
+		console.log(num);
+		function judge(n){
+			k++;
+			if(n==1){
+				return;
+			}
+			if(n%2==0){
+				n/=2;
+			}else{
+				n=n*3+1;
+			}
+			judge(n);
+		}
+	 </script>
+ 	<script>
+// 		function prob14(max) {
+//   var chains = {}
+
+//   function countSeq(n) {
+//     var count = 0, startNum = n
+//     while(n > 1) {
+//         // do not calculate previous results
+//       if(chains[n]) return chains[startNum] = chains[n] + count
+
+//       count++
+//       if(n % 2 === 0) {
+//         n = n / 2
+//       } else {
+//         n = 3 * n + 1
+//       }
+//     }
+//     return chains[startNum] = count
+//   }
+//   var maxChain = 0, num = 0
+//   for(var i = 1; i < max; i++) {
+//     var newChain = countSeq(i)
+//     if(newChain > maxChain) {
+//       maxChain = newChain
+//       num = i
+//     }
+//   }
+//   return num + ' -> ' + (maxChain + 1)
+// }
+// 	console.log(prob14(1000000));
+ 	</script>
+</head>
+<body>
+
+</body>
+</html>

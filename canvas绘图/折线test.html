@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>折线test</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.cans{
+			border:1px solid black;
+		}
+		.cans-div{
+			height:500px;
+			width:500px;
+			margin:0 auto;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+			var cans=document.getElementById("mycanvas");
+			var context=cans.getContext("2d");
+			
+			context.beginPath();
+			context.strokeStyle="#111111";
+			context.moveTo(40,250);
+			context.lineTo(50,230);
+			context.lineTo(100,320);
+			context.lineTo(150,300);
+			context.lineTo(200,280);
+			context.lineTo(250,310);
+			context.lineTo(300,200);
+			context.lineTo(350,300);
+			context.lineTo(400,310);
+			context.lineTo(420,60);
+			context.lineTo(450,280);
+			context.lineTo(460,290);
+			context.lineTo(480,420);
+			context.lineTo(490,330);
+			context.stroke();
+			context.lineTo(490,450);
+			context.lineTo(40,450);
+			context.lineTo(40,40);
+			var grad=context.createLinearGradient(40,40,40,450);
+			grad.addColorStop(0,"black");
+			grad.addColorStop(1,"white");
+			context.fillStyle=grad;
+			context.fill();
+			context.closePath();
+			drawXY();
+
+			function drawXY(){
+				context.beginPath();
+				context.lineWidth=2;
+				context.strokeStyle="gray";
+				context.moveTo(40,40);
+				context.lineTo(40,450);
+				context.lineTo(450,450);
+				context.moveTo(40,40);
+				context.lineTo(35,45);
+				context.moveTo(40,40);
+				context.lineTo(45,45);
+				context.moveTo(450,450);
+				context.lineTo(445,445);
+				context.moveTo(450,450);
+				context.lineTo(445,455);
+				context.stroke();
+				context.closePath();
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<div class="cans-div">
+		<canvas class="cans" id="mycanvas" height="500px" width="500px">您的浏览器不支持canvas标签，请使用谷歌浏览器。</canvas>
+	</div>
+</body>
+</html>

@@ -1,0 +1,254 @@
+body{
+    font-family:"微软雅黑";
+    font-size:16px;
+    background-color:#f0f3f5;
+    color:#666;
+    line-height:28px;
+    overflow-x:hidden;
+}
+*{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+}
+/*以上是css reset*/
+/*上下两个背景图片*/
+.back-wraper{
+    width:1192px;
+    margin:0 auto;
+    height:1735px;
+    position:relative;
+}
+.bigback1{
+    width:1916px;
+    height:455px;
+    background:url("../imgs/bigback1.jpg") no-repeat center 0;
+    position:absolute;
+    top:0;
+    left:-362px;
+}
+.bigback2{
+    width:1919px;
+    height:391px;
+    background:url("../imgs/bigback2.png") no-repeat center 0;
+    position:absolute;
+    top:1343px;
+    left:-364px;
+}
+/*footer的css内容在这里。*/
+.footer{
+    width:100%;
+    height:177px;
+    background-color:#333;
+}
+.footer-con{
+    height:147px;
+    width:1242px;
+    margin:0 auto;
+    padding-top:30px;
+    /*line-height:36px;*/
+    line-height:50px;
+    font-size:12px;
+    color:#e0e0e0;
+    text-align:center;
+}
+.footer-con a,.footer-con span{
+    color:#e0e0e0;
+    text-decoration:none;
+    font-size:12px;
+}
+.footer-con a:hover{
+    text-decoration:underline;
+}
+.person-pic{
+    width:140px;
+    height:150px;
+    background:url("../imgs/person.png") no-repeat 0 0;
+    position:absolute;
+    top:284px;
+    left:66px;
+}
+.main-content{
+    height:1186px;
+    width:1102px;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9fffffff',endColorstr='#9fffffff');
+    background-color:rgba(255, 255, 255, 0.9);
+    position:absolute;
+    top:416px;
+    left:0;
+    z-index:100;
+    padding:0 40px 56px 50px;
+}
+.superiority{
+    width:100%;
+    height:105px;
+    background:url("../imgs/superiority.png") no-repeat center center;
+}
+.superi-next-p{
+    padding:0 80px 0 50px;
+}
+.activity-con-title{
+    height:62px;
+    background:url("../imgs/btn-back1.png") no-repeat 0 24px;
+    padding-top:28px;
+    padding-left:26px;
+    color:#fff;
+    font-size:22px;
+}
+.activity-con{
+    height:164px;
+    padding-left:27px;
+    border-bottom:2px solid #f3f3f3;
+}
+.rules{
+    height:338px;
+    padding-left:22px;
+    padding-top:5px;
+    background:url("../imgs/fire-balloon.png") no-repeat 1005px 235px;
+}
+.rules h3{
+    line-height:53px;
+    color:#333;
+    font-size:19px;
+    font-weight:bold;
+}
+.rules-ul li{
+    padding-left:30px;
+    background:url("../imgs/blue-list-point.png") no-repeat 0 6px;
+}
+.rules-ul li.no-back{
+    background:none;
+    padding-left:62px;
+}
+.join-form{
+    height:431px;
+    width:1093px;
+    background-color:#f0f3f5;
+}
+.i-want-join{
+    height:90px;
+    line-height:90px;
+    font-size:34px;
+    color:#7498e1;
+    text-align:center;
+}
+.input-big-div{
+    width:700px;
+    margin:0 auto;
+}
+.input-div-line{
+    overflow:hidden;
+    margin-bottom:10px;
+}
+.input-div-line .secend-input-div{
+    margin-left:26px;
+}
+.input-div{
+    float:left;
+    width:330px;
+    height:40px;
+    line-height:40px;
+    border:1px solid #dededf;
+    background-color:#fff;
+    color:#999;
+    position:relative;
+}
+.input-div span:first-child{
+    color:red;
+    padding-left:8px;
+    padding-right:8px;
+    vertical-align:middle;
+}
+.input-div .two-whitespace{
+    padding:0 16px;
+}
+.input-div input{
+    color:#555;
+    font-size:16px;
+    height:39px;
+    #height:36px;
+    line-height:44px\9;
+    #line-height:41px;
+    width:200px;
+    border:none;
+    outline:none;
+    position:absolute;
+    left:106px;
+    top:0;
+}
+.secend-input-div input{
+    left:122px;
+    top:0;
+}
+.space-width1{
+    letter-spacing:4px;
+}
+.space-width2{
+    letter-spacing:1.5px;
+}
+.tips-div{
+    overflow:hidden;
+    width:700px;
+    line-height:20px;
+    position:relative;
+}
+.left-tip{
+    display:none;
+    width:334px;
+    height:20px;
+}
+.right-tip{
+    display:none;
+    width:334px;
+    height:20px;
+    position:absolute;
+    top:0;
+    left:358px;
+}
+.red-back{
+    background-color:#d92424;
+    padding:0 10px;
+    border-radius:11px;
+    color:#ffeae6;
+    font-size:13px;
+}
+.input-div span.no-star{
+    padding-left:11px;
+    padding-right:12.3px;
+}
+.wider-input-div{
+    width:688px;
+}
+.wider-input-div input{
+    width:570px;
+}
+.sub-div{
+    margin-top:32px;
+    text-align:center;
+}
+.submit-btn{
+    width:225px;
+    height:38px;
+    border:1px solid #467dca;
+    background-color:#629cf6;
+    border-radius:3px;
+    font-size:18px;
+    color:#fff;
+    font-weight:bold;
+    cursor:pointer;
+}
+.show{
+    display:block;
+}
+.height20{
+    height:20px;
+}
+
+
+
+
+

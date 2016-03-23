@@ -1,0 +1,178 @@
+<meta charset="utf-8">
+<script src="jquery-1.11.3.js"></script>
+<style type="text/css">
+	.bj_shelter_back{
+		width:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:10000;
+		background-color:#666;
+		opacity:0.5;
+		display:none;
+	}
+	.bj_shelter_bance{
+		width:814px;
+		position:absolute;
+		z-index:20000;
+		left:400px;
+		top:80px;
+		background-color:#fff;
+		font-family:"微软雅黑";
+		display:none;
+	} 
+	.bj_shelter_bance p,
+	.bj_shelter_bance a{
+		font-size:13px;
+	}
+	.bj_shelter_bance h2{
+		text-align: center;
+	    height: 53px;
+	    line-height: 53px;
+	    color: #bba582;
+	    font-size: 20px;
+	    background: #ededed;
+	    position: relative;
+	    letter-spacing: 2px;
+	    font-size:23px;
+	    margin:0;
+	    background:#fff url(h2_back.png) no-repeat 110px 48px;
+	}
+	.bj_shelter_bance .bj_close{
+		color: #c9c9c9;
+	    cursor: pointer;
+	    position: absolute;
+	    right: 10px;
+	    top: 0px;
+	}
+	.bj_shelter_text{
+		padding:0 50px 20px 50px;
+	}
+	.bj_shelter_text h3{
+		font-size:18px;
+		padding:22px 0;
+		margin:0;
+		letter-spacing: 0.2px;
+		font-weight:600;
+		color:#333;
+	}
+	.bj_shelter_text p{
+		margin:0;
+		padding:0;
+		text-indent:2em;
+		line-height:24px;
+		letter-spacing: 0.2px;
+		color:#666;
+	}
+	.bj_shelter_text .bj_noindent{
+		text-indent:0;
+	}
+	.bj_shelter_text .bj_text_right{
+		text-align:right;
+	}
+</style>
+
+<div class="bj_shelter_back"></div>
+<div class="bj_shelter_bance">
+  <h2>关于停止欧福市场开户返佣的通知
+  	 <span class="bj_close">X</span>
+  </h2>
+  <div class="bj_shelter_text">
+  	<h3>我们无法鉴别客户的盈利模式，但我们有能力鉴别交易商的盈利模式，永别了欧福！</h3>
+  	<p class="bj_noindent">各位返佣会员：</p>
+	<p>鉴于交易商欧福市场强制要求我们鉴别每一个开户客户的来源及盈利能力，我们有理由认为欧福的该要求已经严重超出我们对交易商所能容忍的道德底线。韬客作为一个一贯坚持道德底线的ib，我们不能对客户的盈利能力加以鉴别并一一呈报给交易商，以换取所谓的ib盈利。</p>
+	<p>在这里我们正式宣布从即日起韬客终止与交易商欧福市场的ib业务合作关系。</p>
+    <p>请所有通过我们开户的会员停止你们在欧福市场的交易，以免你们的返佣受损。</p>
+    <p>对愿意从欧福市场撤资的会员，我们将报销其所有合理提款费用。</p>
+    <p>对仍愿意在欧福市场继续交易的会员，我们可以配合其完成转ib手续。</p>
+ 	<p>很抱歉，从2016年1月14日起，我们将不再提供欧福市场的交易返佣。请各位在欧福市场继续交易的会员自行珍重！</p>
+ 	<p>虽然我们没有能力鉴别会员的盈利能力，但我们有能力鉴别交易商的盈利模式！</p>
+ 	<p>永别了，欧福市场！</p>
+ 	<p><a target="_blank"href="http://www.talkforex.com/thread-509454-1-1.html">http://www.talkforex.com/thread-509454-1-1.html</a></p><br>
+ 	<p class="bj_noindent">特此通知</p><br>
+	<p class="bj_text_right">ib返佣网（ibrebates.com）团队</p>
+  </div>
+</div>
+
+<!--<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>-->
+<script src="jquery.cookie.js"></script>
+
+<script>
+
+/*遮罩层的显示*/
+	var times=$.cookie("times");
+	if(!times){
+		$.cookie("times",0, { expires: 60 });
+		times=0;
+	}else{
+		$.cookie("times",++times, { expires: 60 });
+	}
+	if(times!=null&&times<=1){
+		 $(".bj_shelter_back").css({
+		           display: "block", height: $(document).height()
+		       });
+		       $(".bj_shelter_bance").css({
+		           //设置弹出层距离左边的位置
+		           left: ($("body").width() - $(".bj_shelter_bance").width()) / 2 - 20 + "px",
+		           //设置弹出层距离上面的位置
+		           top: ($(window).height() - $(".bj_shelter_bance").height()) / 2 + $(document).scrollTop() + "px",
+		           display: "block"
+		       });
+		       if(($(window).height() - $(".bj_shelter_bance").height())<0){
+		       	 $(".bj_shelter_bance").css({top: 0});//设置弹出层距离上面的位置
+		       }
+	}
+	//点击关闭按钮的时候，遮罩层关闭
+	$(".bj_close").click(function () {
+		$(".bj_shelter_back,.bj_shelter_bance").css("display", "none");
+	});
+// function writeIp(){
+// 	$.cookie("myIp7",returnCitySN["cip"], { expires: 30 });
+// }
+// function comeTimes(){
+// 	var times=$.cookie("times");
+// 	var myIp=$.cookie("myIp7");
+// 	console.log(myIp);
+// 	if(myIp==null||times==null){
+// 		$.cookie("times",1, { expires: 30 });
+// 	}else{
+// 		$.cookie("times",++times, { expires: 30 });
+// 	}
+	
+// }
+// function popShelter(){
+// 	 $(".bj_shelter_back").css({
+//             display: "block", height: $(document).height()
+//         });
+//         $(".bj_shelter_bance").css({
+//             //设置弹出层距离左边的位置
+//             left: ($("body").width() - $(".bj_shelter_bance").width()) / 2 - 20 + "px",
+//             //设置弹出层距离上面的位置
+//             top: ($(window).height() - $(".bj_shelter_bance").height()) / 2 + $(document).scrollTop() + "px",
+//             display: "block"
+//         });
+//         if(($(window).height() - $(".bj_shelter_bance").height())<0){
+//         	 $(".bj_shelter_bance").css({top: 0});//设置弹出层距离上面的位置
+//         }
+// 		//点击关闭按钮的时候，遮罩层关闭
+// 		$(".bj_close").click(function () {
+// 			$(".bj_shelter_back,.bj_shelter_bance").css("display", "none");
+// 		});
+// }
+// $(function(){
+// 		var myIp=$.cookie("myIp7");
+// 		var times=$.cookie("times");
+// 		console.log(myIp);
+// 		if(myIp==null){
+// 			popShelter();
+// 			comeTimes();console.log(" "+times);
+// 			writeIp();
+// 		}
+// 		else if(myIp==returnCitySN["cip"]&&times<=1){
+// 			popShelter();
+// 			comeTimes();console.log(" "+times);
+// 			writeIp();
+// 		}
+		
+// 	});
+</script>
